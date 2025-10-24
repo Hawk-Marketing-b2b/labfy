@@ -3,12 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Tiles } from "@/components/ui/tiles";
 
 const techLogos = [
-  { name: "OpenAI", color: "border-blue-500" },
-  { name: "Anthropic", color: "border-orange-500" },
-  { name: "Google AI", color: "border-red-500" },
-  { name: "LangChain", color: "border-blue-400" },
-  { name: "n8n", color: "border-pink-500" },
-  { name: "AWS", color: "border-yellow-500" },
+  { name: "OpenAI", logo: "/logo-openai.png" },
+  { name: "Anthropic", logo: "/logo-anthropic.png" },
+  { name: "Google Gemini", logo: "/logo-gemini.png" },
+  { name: "LangChain", logo: "/logo-langchain.svg" },
+  { name: "n8n", logo: "/logo-n8n.png" },
 ];
 
 export default function Hero() {
@@ -86,15 +85,17 @@ export default function Hero() {
           <div className="flex flex-wrap items-center justify-center gap-6">
             {techLogos.map((logo, index) => (
               <motion.div
-                key={logo.name}
+                key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                className="px-6 py-3 border border-gray-700 rounded-lg bg-gray-900/50 backdrop-blur-sm hover:border-gray-600 transition-all"
+                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+                className="px-6 py-3 rounded-2xl border border-gray-800 bg-gray-900/30 backdrop-blur-sm hover:bg-gray-900/50 transition-all"
               >
-                <span className="text-sm font-medium text-foreground">
-                  {logo.name}
-                </span>
+                <img
+                  src={logo.logo}
+                  alt={logo.name}
+                  className="h-6 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+                />
               </motion.div>
             ))}
           </div>
