@@ -74,8 +74,8 @@ export default function AboutUs() {
               {/* Content */}
               <div className="relative z-10">
                 {/* Icon Circle */}
-                <div className="mb-6 w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform mx-auto">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="mb-6 w-16 h-16 rounded-full bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 flex items-center justify-center group-hover:scale-110 transition-transform mx-auto shadow-lg">
+                  <feature.icon className="w-8 h-8 text-black" />
                 </div>
 
                 {/* Title */}
