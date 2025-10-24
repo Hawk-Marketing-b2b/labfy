@@ -69,7 +69,7 @@ export default function Solutions() {
           <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
             Nossas soluções
           </p>
-          <h2 className="text-[35px] md:text-[45px] font-bold mb-6">
+          <h2 className="text-[35px] md:text-[45px] font-semibold mb-6">
             Escale sua operação sem
             <br />
             escalar sua folha de pagamento

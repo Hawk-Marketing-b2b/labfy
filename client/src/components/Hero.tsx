@@ -28,7 +28,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-4 mb-8"
         >
-          <h1 className="text-[50px] md:text-[60px] lg:text-[70px] font-bold leading-tight">
+          <h1 className="text-[50px] md:text-[60px] lg:text-[70px] font-semibold leading-tight">
             Escale sua operação sem
             <br />
             escalar sua folha de

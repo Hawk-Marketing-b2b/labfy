@@ -24,7 +24,7 @@ export default function DiagnosticCTA({ onOpenForm }: DiagnosticCTAProps) {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-[35px] md:text-[45px] font-bold mb-6">
+          <h2 className="text-[35px] md:text-[45px] font-semibold mb-6">
             Descubra onde a IA pode
             <br />
             transformar sua operação
