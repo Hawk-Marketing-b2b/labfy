@@ -63,7 +63,7 @@ export default function Founder() {
               <img
                 src="/rhulian-founder.png"
                 alt="Rhulian Marcus - Fundador LabFy a.i solutions"
-                className="w-full h-full object-cover object-[center_20%]"
+                className="w-full h-full object-cover object-[center_25%]"
               />
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
