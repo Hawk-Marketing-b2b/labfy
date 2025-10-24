@@ -34,12 +34,13 @@ export default function Header() {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="flex items-center gap-2 text-lg font-bold hover:opacity-80 transition-opacity"
+              className="flex items-center hover:opacity-80 transition-opacity"
             >
-              <div className="w-7 h-7 bg-green-500 rounded flex items-center justify-center text-black font-bold text-sm">
-                L
-              </div>
-              <span>LabFy a.i</span>
+              <img
+                src="/logo-labfy.png"
+                alt="LabFy a.i solutions"
+                className="h-8 w-auto object-contain"
+              />
             </a>
 
             {/* Navigation Links */}
@@ -77,12 +78,13 @@ export default function Header() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="flex items-center gap-2 text-lg font-bold hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
-            <div className="w-7 h-7 bg-green-500 rounded flex items-center justify-center text-black font-bold text-sm">
-              L
-            </div>
-            <span>LabFy a.i</span>
+            <img
+              src="/logo-labfy.png"
+              alt="LabFy a.i solutions"
+              className="h-7 w-auto object-contain"
+            />
           </a>
 
           {/* Mobile Menu Button */}
