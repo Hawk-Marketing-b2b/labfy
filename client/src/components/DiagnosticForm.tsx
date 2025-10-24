@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,6 +24,11 @@ interface FormData {
   empresa: string;
   faturamento: string;
   segmento: string;
+  utm_source: string;
+  utm_campaign: string;
+  utm_content: string;
+  utm_medium: string;
+  utm_term: string;
 }
 
 const steps = [
@@ -64,7 +69,25 @@ export default function DiagnosticForm({
     empresa: "",
     faturamento: "",
     segmento: "",
+    utm_source: "",
+    utm_campaign: "",
+    utm_content: "",
+    utm_medium: "",
+    utm_term: "",
   });
+
+  // Capturar UTMs da URL ao montar o componente
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    setFormData((prev) => ({
+      ...prev,
+      utm_source: urlParams.get("utm_source") || "",
+      utm_campaign: urlParams.get("utm_campaign") || "",
+      utm_content: urlParams.get("utm_content") || "",
+      utm_medium: urlParams.get("utm_medium") || "",
+      utm_term: urlParams.get("utm_term") || "",
+    }));
+  }, []);
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -95,15 +118,33 @@ export default function DiagnosticForm({
     }
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    toast.success("Diagnóstico solicitado com sucesso!");
-    
-    // Reset after 3 seconds
-    setTimeout(() => {
-      handleClose();
-    }, 3000);
+  const handleSubmit = async () => {
+    try {
+      // Enviar dados para o webhook
+      const response = await fetch("https://n8n-n8n-start.t4r0vc.easypanel.host/webhook/labfy", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Form submitted successfully:", formData);
+        setIsSubmitted(true);
+        toast.success("Diagnóstico solicitado com sucesso!");
+        
+        // Reset after 3 seconds
+        setTimeout(() => {
+          handleClose();
+        }, 3000);
+      } else {
+        throw new Error("Falha ao enviar formulário");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Erro ao enviar formulário. Tente novamente.");
+    }
   };
 
   const handleClose = () => {
@@ -115,6 +156,11 @@ export default function DiagnosticForm({
       empresa: "",
       faturamento: "",
       segmento: "",
+      utm_source: "",
+      utm_campaign: "",
+      utm_content: "",
+      utm_medium: "",
+      utm_term: "",
     });
     onClose();
   };
