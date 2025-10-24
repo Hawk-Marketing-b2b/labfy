@@ -1,22 +1,34 @@
-import { Button } from "@/components/ui/button";
-import { APP_LOGO, APP_TITLE } from "@/const";
+import { useState } from "react";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import AboutUs from "@/components/AboutUs";
+import Solutions from "@/components/Solutions";
+import Founder from "@/components/Founder";
+import DiagnosticCTA from "@/components/DiagnosticCTA";
+import Footer from "@/components/Footer";
+import DiagnosticForm from "@/components/DiagnosticForm";
 
-/**
- * All content in this page are only for example, delete if unneeded
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
-  // Use APP_LOGO (as image src) and APP_TITLE if needed
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen">
+      <Header />
       <main>
-        Example Page
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        <AboutUs />
+        <Solutions />
+        <Founder />
+        <DiagnosticCTA onOpenForm={() => setIsFormOpen(true)} />
       </main>
+      <Footer />
+      
+      {/* Diagnostic Form Modal */}
+      <DiagnosticForm 
+        isOpen={isFormOpen} 
+        onClose={() => setIsFormOpen(false)} 
+      />
     </div>
   );
 }
+
