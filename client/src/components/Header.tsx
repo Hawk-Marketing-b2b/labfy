@@ -1,88 +1,109 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setMobileMenuOpen(false);
-    }
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-4 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+      {/* Dot Pattern Background */}
+      <div 
+        className="absolute inset-0 opacity-30 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '20px 20px'
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-sm">L</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">LabFy a.i</span>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="flex items-center gap-2 text-xl font-bold hover:opacity-80 transition-opacity"
+          >
+            <div className="w-8 h-8 bg-green-500 rounded flex items-center justify-center text-black font-bold">
+              L
             </div>
-          </Link>
+            <span>LabFy a.i</span>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("sobre-nos")}
-              className="text-foreground/80 hover:text-foreground transition-colors"
+              className="text-gray-300 hover:text-white transition-colors text-sm"
             >
               Sobre nós
             </button>
             <button
               onClick={() => scrollToSection("solucoes")}
-              className="text-foreground/80 hover:text-foreground transition-colors"
+              className="text-gray-300 hover:text-white transition-colors text-sm"
             >
               Soluções
             </button>
             <Button
               onClick={() => scrollToSection("diagnostico")}
-              className="bg-white text-black hover:bg-gray-200 transition-all"
+              className="bg-white text-black hover:bg-gray-200 transition-all rounded-full px-6"
             >
-              Diagnóstico
+              Diagnóstico →
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-foreground hover:bg-foreground/10 rounded-lg transition-colors"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10">
-            <nav className="flex flex-col gap-4">
+        {isMenuOpen && (
+          <nav className="md:hidden py-4 border-t border-gray-800">
+            <div className="flex flex-col gap-4">
               <button
-                onClick={() => scrollToSection("sobre-nos")}
-                className="text-foreground/80 hover:text-foreground transition-colors text-left"
+                onClick={() => {
+                  scrollToSection("sobre-nos");
+                  setIsMenuOpen(false);
+                }}
+                className="text-left px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
               >
                 Sobre nós
               </button>
               <button
-                onClick={() => scrollToSection("solucoes")}
-                className="text-foreground/80 hover:text-foreground transition-colors text-left"
+                onClick={() => {
+                  scrollToSection("solucoes");
+                  setIsMenuOpen(false);
+                }}
+                className="text-left px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
               >
                 Soluções
               </button>
               <Button
-                onClick={() => scrollToSection("diagnostico")}
+                onClick={() => {
+                  scrollToSection("diagnostico");
+                  setIsMenuOpen(false);
+                }}
                 className="bg-white text-black hover:bg-gray-200 transition-all w-full"
               >
-                Diagnóstico
+                Diagnóstico →
               </Button>
-            </nav>
-          </div>
+            </div>
+          </nav>
         )}
       </div>
     </header>
