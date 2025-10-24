@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Tiles } from "@/components/ui/tiles";
 
 const techLogos = [
   { name: "OpenAI", color: "border-blue-500" },
@@ -19,7 +20,14 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center pt-[120px]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 text-center pt-[120px] overflow-hidden">
+      {/* Animated Tiles Background */}
+      <div className="absolute inset-0 z-0">
+        <Tiles rows={50} cols={20} />
+      </div>
+      
+      {/* Content with higher z-index */}
+      <div className="relative z-10 w-full">
       <div className="max-w-6xl mx-auto text-center">
         {/* Hero Title */}
         <motion.div
@@ -91,6 +99,7 @@ export default function Hero() {
             ))}
           </div>
         </motion.div>
+      </div>
       </div>
     </section>
   );
