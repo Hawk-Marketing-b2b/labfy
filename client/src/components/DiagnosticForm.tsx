@@ -22,6 +22,7 @@ interface FormData {
   nome: string;
   telefone: string;
   empresa: string;
+  email: string;
   faturamento: string;
   segmento: string;
   utm_source: string;
@@ -32,7 +33,7 @@ interface FormData {
 }
 
 const steps = [
-  { id: 1, title: "Informações Pessoais", fields: ["nome", "telefone"] },
+  { id: 1, title: "Informações Pessoais", fields: ["nome", "telefone", "email"] },
   { id: 2, title: "Informações da Empresa", fields: ["empresa", "faturamento"] },
   { id: 3, title: "Segmento", fields: ["segmento"] },
 ];
@@ -66,6 +67,7 @@ export default function DiagnosticForm({
   const [formData, setFormData] = useState<FormData>({
     nome: "",
     telefone: "",
+    email: "",
     empresa: "",
     faturamento: "",
     segmento: "",
@@ -95,9 +97,15 @@ export default function DiagnosticForm({
 
   const isStepValid = () => {
     const currentFields = steps[currentStep - 1].fields;
-    return currentFields.every(
-      (field) => formData[field as keyof FormData].trim() !== ""
-    );
+    return currentFields.every((field) => {
+      const value = formData[field as keyof FormData].trim();
+      if (field === "email") {
+        // basic email validation
+        const emailRegex = /^\S+@\S+\.\S+$/;
+        return emailRegex.test(value);
+      }
+      return value !== "";
+    });
   };
 
   const handleNext = () => {
@@ -153,6 +161,7 @@ export default function DiagnosticForm({
     setFormData({
       nome: "",
       telefone: "",
+      email: "",
       empresa: "",
       faturamento: "",
       segmento: "",
@@ -242,6 +251,19 @@ export default function DiagnosticForm({
                               value={formData.nome}
                               onChange={(e) =>
                                 handleInputChange("nome", e.target.value)
+                              }
+                              className="mt-2"
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="email">E-mail</Label>
+                            <Input
+                              id="email"
+                              type="email"
+                              placeholder="seu@exemplo.com"
+                              value={formData.email}
+                              onChange={(e) =>
+                                handleInputChange("email", e.target.value)
                               }
                               className="mt-2"
                             />
