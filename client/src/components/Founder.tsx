@@ -21,7 +21,7 @@ export default function Founder() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-              className="relative p-8 md:p-12 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm"
+              className="relative p-8 md:p-12 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/30 to-black/30 backdrop-blur-xl"
         >
           {/* Name and Title */}
           <div className="mb-6">

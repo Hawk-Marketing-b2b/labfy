@@ -57,7 +57,7 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm hover:border-gray-700 transition-all group overflow-hidden"
+              className="relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/30 to-black/30 backdrop-blur-xl hover:border-gray-700 transition-all group overflow-hidden"
             >
               {/* Grid Background Pattern */}
               <div 
