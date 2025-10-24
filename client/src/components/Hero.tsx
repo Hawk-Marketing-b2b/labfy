@@ -19,7 +19,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center pt-20 pb-16 px-4">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center pt-[120px]">
       <div className="max-w-6xl mx-auto text-center">
         {/* Hero Title */}
         <motion.div
