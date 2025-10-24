@@ -56,7 +56,7 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section id="solucoes" className="py-20 px-4 bg-black/20">
+    <section id="solucoes" className="py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -66,10 +66,10 @@ export default function Solutions() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-sm text-foreground/50 uppercase tracking-wider mb-4">
+          <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
             Nossas soluções
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-[35px] md:text-[45px] font-bold mb-6">
             Escale sua operação sem
             <br />
             escalar sua folha de pagamento
@@ -85,20 +85,35 @@ export default function Solutions() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-6 rounded-xl border border-white/10 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 transition-all group"
+              className="relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/30 to-black/30 backdrop-blur-sm hover:border-gray-700 transition-all group overflow-hidden"
             >
-              {/* Icon */}
-              <div className="mb-4 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <solution.icon className="w-6 h-6 text-white" />
+              {/* Grid Background Pattern */}
+              <div 
+                className="absolute inset-0 opacity-10"
+                style={{
+                  backgroundImage: `
+                    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)
+                  `,
+                  backgroundSize: '20px 20px'
+                }}
+              />
+
+              {/* Content */}
+              <div className="relative z-10">
+                {/* Icon Circle */}
+                <div className="mb-4 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <solution.icon className="w-6 h-6 text-white" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
+
+                {/* Description */}
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {solution.description}
+                </p>
               </div>
-
-              {/* Title */}
-              <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
-
-              {/* Description */}
-              <p className="text-foreground/70 text-sm leading-relaxed">
-                {solution.description}
-              </p>
             </motion.div>
           ))}
         </div>

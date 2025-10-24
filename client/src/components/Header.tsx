@@ -44,7 +44,7 @@ export default function Header() {
             </button>
             <Button
               onClick={() => scrollToSection("diagnostico")}
-              className="bg-transparent border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-all"
+              className="bg-white text-black hover:bg-gray-200 transition-all"
             >
               Diagnóstico
             </Button>
@@ -77,7 +77,7 @@ export default function Header() {
               </button>
               <Button
                 onClick={() => scrollToSection("diagnostico")}
-                className="bg-transparent border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-all w-full"
+                className="bg-white text-black hover:bg-gray-200 transition-all w-full"
               >
                 Diagnóstico
               </Button>

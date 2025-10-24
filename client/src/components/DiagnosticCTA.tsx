@@ -24,12 +24,12 @@ export default function DiagnosticCTA({ onOpenForm }: DiagnosticCTAProps) {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-[35px] md:text-[45px] font-bold mb-6">
             Descubra onde a IA pode
             <br />
             transformar sua operação
           </h2>
-          <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
             Agende uma sessão estratégica onde vamos:
           </p>
         </motion.div>
@@ -52,7 +52,7 @@ export default function DiagnosticCTA({ onOpenForm }: DiagnosticCTAProps) {
               className="flex items-start gap-3"
             >
               <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
-              <p className="text-foreground/80 text-lg">{benefit}</p>
+              <p className="text-gray-300 text-lg">{benefit}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -68,7 +68,7 @@ export default function DiagnosticCTA({ onOpenForm }: DiagnosticCTAProps) {
           <Button
             onClick={onOpenForm}
             size="lg"
-            className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-lg px-12 py-6 rounded-full shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transition-all"
+            className="bg-white text-black hover:bg-gray-200 text-lg px-12 py-6 rounded-full transition-all"
           >
             Solicitar Diagnóstico Gratuito
           </Button>
