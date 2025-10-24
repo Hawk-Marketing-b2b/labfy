@@ -59,11 +59,11 @@ export default function Founder() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-2xl">
+            <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-2xl max-h-[500px]">
               <img
                 src="/rhulian-founder.png"
                 alt="Rhulian Marcus - Fundador LabFy a.i solutions"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover object-center"
               />
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
