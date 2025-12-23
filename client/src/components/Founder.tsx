@@ -31,7 +31,7 @@ export default function Founder() {
             {/* Bio */}
             <p className="text-gray-300 leading-relaxed text-lg">
               Com mais de uma década de experiência em tecnologia e inovação, Rhulian lidera a 
-              LabFy a.i solutions na missão de democratizar o acesso à inteligência artificial 
+              Nora Labs a.i solutions na missão de democratizar o acesso à inteligência artificial 
               para empresas de todos os portes. Sua visão é transformar processos complexos em 
               soluções simples e eficientes, permitindo que negócios alcancem resultados 
               extraordinários através da automação inteligente.
@@ -62,7 +62,7 @@ export default function Founder() {
             <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-2xl max-h-[500px] flex items-center justify-center">
               <img
                 src="/rhulian-founder.png"
-                alt="Rhulian Marcus - Fundador LabFy a.i solutions"
+                alt="Rhulian Marcus - Fundador Nora Labs a.i solutions"
                 className="w-full h-full object-cover object-[center_25%]"
               />
               {/* Gradient Overlay */}

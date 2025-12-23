@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import Solutions from "@/components/Solutions";
-import Founder from "@/components/Founder";
+import Process from "@/components/Process";
 import DiagnosticCTA from "@/components/DiagnosticCTA";
 import Footer from "@/components/Footer";
 import DiagnosticForm from "@/components/DiagnosticForm";
@@ -18,7 +18,7 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <Solutions />
-        <Founder />
+        <Process />
         <DiagnosticCTA onOpenForm={() => setIsFormOpen(true)} />
       </main>
       <Footer />

@@ -36,11 +36,7 @@ export default function Header() {
               }}
               className="flex items-center hover:opacity-80 transition-opacity"
             >
-              <img
-                src="/logo-labfy.png"
-                alt="LabFy a.i solutions"
-                className="h-8 w-auto object-contain"
-              />
+              <span className="text-xl font-bold text-white">Nora Labs</span>
             </a>
 
             {/* Navigation Links */}
@@ -80,11 +76,7 @@ export default function Header() {
             }}
             className="flex items-center hover:opacity-80 transition-opacity"
           >
-            <img
-              src="/logo-labfy.png"
-              alt="LabFy a.i solutions"
-              className="h-7 w-auto object-contain"
-            />
+            <span className="text-xl font-bold text-white">Nora Labs</span>
           </a>
 
           {/* Mobile Menu Button */}

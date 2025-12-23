@@ -36,11 +36,11 @@ export default function Hero() {
           className="space-y-4 mb-8"
         >
           <h1 className="text-[50px] md:text-[60px] lg:text-[70px] font-semibold leading-tight">
-            Escale sua operação sem
+            Desenvolvemos arquitetura de IA
             <br />
-            escalar sua folha de
+            para reduzir custos
             <br />
-            pagamento
+            operacionais
           </h1>
         </motion.div>
 
@@ -51,9 +51,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12"
         >
-          Ajudamos empresas em alto crescimento a adotar sistemas de ponta
-          personalizados com IA para economizar tempo, cortar custos e acelerar
-          o crescimento.
+          Automatizamos o trabalho manual. Seu time se livra de tarefas repetitivas e foca no que gera valor. Você opera com mais eficiência e lucro.
         </motion.p>
 
         {/* CTA Button */}

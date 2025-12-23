@@ -70,9 +70,7 @@ export default function Solutions() {
             Nossas soluções
           </p>
           <h2 className="text-[35px] md:text-[45px] font-semibold mb-6">
-            Escale sua operação sem
-            <br />
-            escalar sua folha de pagamento
+            Onde aplicamos arquitetura de IA
           </h2>
         </motion.div>
 
@@ -85,7 +83,9 @@ export default function Solutions() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/20 to-black/20 backdrop-blur-xl hover:border-gray-700 transition-all group overflow-hidden"
+              className={`relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/20 to-black/20 backdrop-blur-xl hover:border-gray-700 transition-all group overflow-hidden ${
+                index === 6 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''
+              }`}
             >
               {/* Grid Background Pattern */}
               <div 
