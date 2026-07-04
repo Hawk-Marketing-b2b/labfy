@@ -104,3 +104,6 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# Local working backups (pre-processing originals, not used by the app)
+assets-src/

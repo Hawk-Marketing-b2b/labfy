@@ -40,6 +40,16 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-whatsapp: #25d366; /* verde oficial — exclusivo do botão do CTA final */
+
+  /* Acentos por produto (Jornada) — a cor vem só dos sistemas, o casco é mono */
+  --color-lime: #A3E635; /* AtendeBot (paradas 1-2) */
+  --color-ember: #C2410C; /* Barbearia Inteligente (parada 3) */
+  --color-navy: #0D1B2A; /* base escura da parada 3 */
+  --color-neon: #4ADE80; /* Cliente · dashboard sob medida (parada 4) */
+  --color-ice: #BFDBFE; /* brilho azul-gelo do hero/casco */
+  --font-display: "Inter Tight", "Inter", sans-serif;
 }
 
 :root {
@@ -83,10 +93,9 @@
   --primary-foreground: var(--color-blue-50);
   --sidebar-primary: var(--color-blue-500);
   --sidebar-primary-foreground: var(--color-blue-50);
-  --background: #000000;
+  --background: #0A0A0F;
   --foreground: #ffffff;
-  --tile: rgba(255, 255, 255, 0.05);
-  --card: #0a0a0a;
+  --card: #0e0e14;
   --card-foreground: #ffffff;
   --popover: #0a0a0a;
   --popover-foreground: #ffffff;
@@ -114,17 +123,86 @@
   --sidebar-ring: oklch(0.488 0.243 264.376);
 }
 
+/* Lenis (smooth scroll) — https://github.com/darkroomengineering/lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Grain sutil por cima de tudo — separa o dark flat do dark premium */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: soft-light;
+  background-size: 160px 160px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Respiração do Ø no fallback estático do hero */
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 16px rgb(191 219 254 / 0.25));
+  }
+  50% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 36px rgb(191 219 254 / 0.45));
+  }
+}
+.animate-breathe {
+  animation: breathe 5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-breathe {
+    animation: none;
+  }
+}
+
+/* Drift lento do DNA do manifesto */
+@keyframes dna-drift {
+  from {
+    transform: translateY(-36px) rotate(var(--dna-rot, 18deg));
+  }
+  to {
+    transform: translateY(36px) rotate(var(--dna-rot, 18deg));
+  }
+}
+.animate-dna-drift {
+  --dna-rot: 18deg;
+  animation: dna-drift 16s ease-in-out infinite alternate;
+}
+.animate-dna-drift-slow {
+  --dna-rot: -14deg;
+  animation: dna-drift 22s ease-in-out infinite alternate-reverse;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-dna-drift,
+  .animate-dna-drift-slow {
+    animation: none;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  html {
-    scroll-behavior: smooth;
-  }
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
-    background-color: #000000;
+    background-color: #0A0A0F;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

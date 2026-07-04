@@ -1,34 +1,30 @@
-import { useState } from "react";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import AboutUs from "@/components/AboutUs";
-import Solutions from "@/components/Solutions";
-import Process from "@/components/Process";
-import DiagnosticCTA from "@/components/DiagnosticCTA";
 import Footer from "@/components/Footer";
-import DiagnosticForm from "@/components/DiagnosticForm";
+import Header from "@/components/Header";
+import Automations from "@/components/sections/Automations";
+import Contact from "@/components/sections/Contact";
+import Experts from "@/components/sections/Experts";
+import Founders from "@/components/sections/Founders";
+import Hero from "@/components/sections/Hero";
+import Journey from "@/components/sections/Journey";
+import Manifesto from "@/components/sections/Manifesto";
+import Process from "@/components/sections/Process";
 
 export default function Home() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen bg-background text-foreground">
+      <div className="grain" aria-hidden />
       <Header />
       <main>
         <Hero />
-        <AboutUs />
-        <Solutions />
+        <Manifesto />
+        <Journey />
+        <Automations />
+        <Experts />
         <Process />
-        <DiagnosticCTA onOpenForm={() => setIsFormOpen(true)} />
+        <Founders />
+        <Contact />
       </main>
       <Footer />
-      
-      {/* Diagnostic Form Modal */}
-      <DiagnosticForm 
-        isOpen={isFormOpen} 
-        onClose={() => setIsFormOpen(false)} 
-      />
     </div>
   );
 }
-
