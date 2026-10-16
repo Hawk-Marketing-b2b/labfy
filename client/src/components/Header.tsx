@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useLocation } from "wouter";
 import { useSmoothScroll } from "@/components/fx/SmoothScroll";
 import WhatsAppCta from "@/components/WhatsAppCta";
 import { cn } from "@/lib/utils";
@@ -12,6 +13,9 @@ const NAV = [
 
 export default function Header() {
   const { scrollTo } = useSmoothScroll();
+  const [location] = useLocation();
+  // Fora da home as âncoras da nav não existem: logo volta pra home e a nav some.
+  const isHome = location === "/";
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,19 +38,29 @@ export default function Header() {
       )}
     >
       <div className="container flex h-16 items-center justify-between">
-        <button
-          onClick={() => scrollTo("#hero", 0)}
-          aria-label="NØRA Labs, voltar ao topo"
-          className="shrink-0"
-        >
-          <img
-            src="/logos/nora-labs-wordmark.png"
-            alt="NØRA Labs"
-            className="h-7 w-auto md:h-8"
-          />
-        </button>
+        {isHome ? (
+          <button
+            onClick={() => scrollTo("#hero", 0)}
+            aria-label="NØRA Labs, voltar ao topo"
+            className="shrink-0"
+          >
+            <img
+              src="/logos/nora-labs-wordmark.png"
+              alt="NØRA Labs"
+              className="h-7 w-auto md:h-8"
+            />
+          </button>
+        ) : (
+          <a href="/" aria-label="NØRA Labs, ir para a home" className="shrink-0">
+            <img
+              src="/logos/nora-labs-wordmark.png"
+              alt="NØRA Labs"
+              className="h-7 w-auto md:h-8"
+            />
+          </a>
+        )}
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className={cn("hidden items-center gap-8", isHome && "md:flex")}>
           {NAV.map(item => (
             <button
               key={item.target}

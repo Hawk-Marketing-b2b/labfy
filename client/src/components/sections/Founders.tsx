@@ -3,7 +3,6 @@ import Reveal from "@/components/fx/Reveal";
 
 const FOUNDERS = [
   { photo: "/founders/rhulian.jpg", name: "Rhulian Marcus", role: "Advisor" },
-  { photo: "/founders/jhonatan.jpg", name: "Jhonatan Silva", role: "CEO" },
   { photo: "/founders/enzo.jpg", name: "Enzo Faria", role: "CTO" },
 ];
 
@@ -20,7 +19,7 @@ export default function Founders() {
           </h2>
         </Reveal>
 
-        <div className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-2xl gap-6 sm:grid-cols-2">
           {FOUNDERS.map((founder, i) => (
             <Reveal key={founder.name} delay={0.1 + i * 0.08}>
               <motion.div

@@ -6,12 +6,14 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import SmoothScroll from "./components/fx/SmoothScroll";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Dna from "./pages/Dna";
 import Home from "./pages/Home";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/dna"} component={Dna} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

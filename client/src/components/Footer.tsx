@@ -1,6 +1,7 @@
 import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const LINKS = [
+  { label: "Nosso DNA", href: "/dna" },
   { label: "WhatsApp", href: WHATSAPP_URL },
   { label: "AtendeBot", href: "https://atende.bot" },
   { label: "Instagram", href: "https://instagram.com/noralabs.digital" },
@@ -21,8 +22,10 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(link.href.startsWith("http") && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
               className="text-sm text-white/50 transition-colors hover:text-white"
             >
               {link.label}
