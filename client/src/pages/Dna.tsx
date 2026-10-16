@@ -35,19 +35,19 @@ import Founders from "@/components/sections/Founders";
 const PONTOS = [
   {
     title: "Entender antes de construir",
-    body: "Sob medida começa ouvindo. A gente senta com quem faz o trabalho, entende a operação como ela é e só depois desenha a solução.",
+    body: "Todo sob medida começa com escuta. A gente senta com quem põe a mão na massa, entende como a operação roda de verdade e só aí desenha a solução.",
   },
   {
     title: "Fazer mais com menos",
-    body: "Somos um time pequeno que entrega como um grande, porque usamos IA e automação em tudo, inclusive no nosso próprio trabalho.",
+    body: "Time enxuto, entrega de gente grande. O segredo é IA e automação em tudo, inclusive no nosso próprio trabalho.",
   },
   {
     title: "Cuidar do que construímos",
-    body: "O sistema não termina na entrega. A gente acompanha, ajusta e continua por perto.",
+    body: "Depois que o sistema vai pro ar, a gente segue por perto: acompanha, ajusta e melhora.",
   },
   {
     title: "Aprender todo dia",
-    body: "A tecnologia muda toda semana, e isso é o que deixa o trabalho divertido. Aqui ninguém precisa saber tudo, só ter vontade de aprender.",
+    body: "A tecnologia muda toda semana, e é isso que deixa tudo mais divertido. Aqui o que conta é a vontade de aprender.",
   },
 ];
 
@@ -60,27 +60,27 @@ const RELACAO: Item[] = [
   {
     icon: Compass,
     title: "Liberdade com contexto",
-    body: "Você tem espaço para decidir como resolver. A gente só pede que entenda o porquê e mantenha o time por dentro.",
+    body: "Você tem espaço pra decidir como resolver. Só entende o porquê e mantém o time por dentro.",
   },
   {
     icon: Lightbulb,
     title: "A melhor ideia ganha",
-    body: "Não o cargo. Somos horizontais: qualquer pessoa pode questionar qualquer decisão, inclusive dos fundadores.",
+    body: "Venha de quem vier. Aqui qualquer pessoa pode questionar qualquer decisão, inclusive dos fundadores.",
   },
   {
     icon: PackageCheck,
-    title: "Prometer pouco, entregar muito",
-    body: "O prazo que a gente fala é o prazo que a gente cumpre.",
+    title: "Palavra cumprida",
+    body: "Prazo combinado é prazo entregue. E, se der pra entregar um pouco mais, melhor ainda.",
   },
   {
     icon: Shuffle,
     title: "Todo mundo faz de tudo",
-    body: "Dev conversa com cliente, fundador testa sistema. Ninguém está acima de nenhuma tarefa.",
+    body: "Dev conversa com cliente, fundador testa sistema. Ninguém tá acima de tarefa nenhuma.",
   },
   {
     icon: Users,
     title: "Ninguém resolve sozinho",
-    body: "Pedir ajuda cedo é sinal de maturidade, não de fraqueza.",
+    body: "Travou? Chama alguém. Pedir ajuda cedo poupa o tempo de todo mundo.",
   },
 ];
 
@@ -88,12 +88,12 @@ const TRABALHO: Item[] = [
   {
     icon: Ear,
     title: "Perto de quem usa",
-    body: "Mapeamos o processo com quem faz o trabalho no dia a dia, não só com quem contrata.",
+    body: "A gente mapeia o processo junto com quem faz o trabalho no dia a dia.",
   },
   {
     icon: Footprints,
     title: "Passos curtos",
-    body: "Entregamos em partes pequenas, e o sistema cresce junto com a operação. Ouvir cedo poupa retrabalho depois.",
+    body: "Entrega em partes pequenas, com o sistema crescendo junto com a operação. Feedback cedo poupa retrabalho.",
   },
   {
     icon: Feather,
@@ -103,12 +103,12 @@ const TRABALHO: Item[] = [
   {
     icon: Sparkles,
     title: "IA no nosso dia a dia",
-    body: "Antes de levar IA para o cliente, a gente usa IA. Tarefa repetitiva por aqui vira automação.",
+    body: "A gente usa IA em tudo antes de levar pro cliente. Tarefa repetitiva por aqui vira automação rapidinho.",
   },
   {
     icon: NotebookPen,
     title: "Tudo escrito",
-    body: "Decisões, acessos e aprendizados ficam registrados, para ninguém depender da memória de ninguém.",
+    body: "Decisões, acessos e aprendizados ficam registrados, pra ninguém depender da memória de ninguém.",
   },
 ];
 
@@ -121,7 +121,7 @@ const VALORES: Item[] = [
   {
     icon: Feather,
     title: "Simplicidade",
-    body: "Software simples é mais rápido de fazer, mais barato de manter e mais difícil de quebrar. Vale também para a forma como a gente conversa.",
+    body: "Software simples é mais rápido de fazer, mais barato de manter e mais difícil de quebrar. Vale também pro jeito como a gente conversa.",
   },
   {
     icon: Eye,
@@ -136,7 +136,7 @@ const VALORES: Item[] = [
   {
     icon: Smile,
     title: "Leveza",
-    body: "Trabalho sério não precisa ser pesado. Comemoramos as vitórias, rimos dos perrengues e respeitamos a vida fora do trabalho.",
+    body: "Dá pra levar o trabalho a sério e se divertir no caminho. A gente comemora as vitórias, ri dos perrengues e respeita a vida fora do trabalho.",
   },
 ];
 
@@ -144,12 +144,12 @@ const PILARES: Item[] = [
   {
     icon: GraduationCap,
     title: "Aprendizado contínuo",
-    body: "Aprendemos algo novo todo dia e compartilhamos. Ensinar é o melhor jeito de aprender.",
+    body: "Todo dia tem coisa nova pra aprender, e a gente divide com o time. Ensinar é o melhor jeito de aprender.",
   },
   {
     icon: Rocket,
     title: "Inovação com propósito",
-    body: "Testamos o que há de novo em IA e tecnologia, mas só levamos para o cliente o que resolve um problema de verdade.",
+    body: "A gente testa tudo que sai de novo em IA e leva pro cliente o que resolve problema de verdade.",
   },
   {
     icon: ShieldCheck,
@@ -162,7 +162,7 @@ const NAO_ABRIMOS_MAO: Item[] = [
   {
     icon: BadgeCheck,
     title: "Honestidade",
-    body: "Sempre, mesmo quando a verdade é desconfortável.",
+    body: "Sempre, até quando a verdade é desconfortável.",
   },
   {
     icon: Lock,
@@ -178,20 +178,20 @@ const NAO_ABRIMOS_MAO: Item[] = [
 
 // [destaque, resto da frase]
 const COMBINADOS: [string, string][] = [
-  ["Entender antes de construir", ", em vez de sair codando."],
-  ["Testar antes de entregar", ", em vez de torcer para funcionar."],
-  ["Contar um erro assim que ele aparece", ". Erro escondido sempre cresce."],
-  ["Escolher o caminho simples", ", em vez de complicar para impressionar."],
-  ["Dar prazos realistas", ", em vez de prometer o que já sabemos que não vamos cumprir."],
-  ["Recomendar só o que o cliente precisa", ", mesmo que isso signifique vender menos."],
-  ["Automatizar o que se repete", ", em vez de fazer na mão todo dia."],
-  ["Transformar erro em aprendizado", ": um teste, um processo ou uma automação, para ele não voltar."],
-  ["Falar, mesmo com receio", ", em vez de guardar uma ideia ou uma preocupação."],
+  ["Entender antes de construir", ": primeiro a conversa, depois o código."],
+  ["Testar antes de entregar", ", sempre."],
+  ["Contar o erro assim que ele aparece", ". Quanto antes, mais fácil de resolver."],
+  ["Escolher o caminho simples", " sempre que der."],
+  ["Combinar prazos realistas", " e cumprir o combinado."],
+  ["Recomendar o que o cliente precisa", ", na medida certa."],
+  ["Automatizar o que se repete", ". Fez três vezes na mão? Vira automação."],
+  ["Transformar erro em aprendizado", ": um teste, um processo ou uma automação, pra ele não voltar."],
+  ["Falar o que pensa", ", mesmo quando dá um frio na barriga."],
   ["Receber feedback de peito aberto", ", inclusive na revisão de código."],
-  ["Medir pelo que foi entregue", ", e não pelas horas ocupadas."],
-  ["Melhorar o que “sempre foi feito assim”", ", quando houver um jeito melhor."],
-  ["Pensar no time", " antes do resultado individual."],
-  ["Comemorar juntos", " cada conquista."],
+  ["Focar no que foi entregue", ". Resultado no ar é o que conta."],
+  ["Melhorar o que “sempre foi feito assim”", ", sempre que aparecer um jeito melhor."],
+  ["Jogar pelo time", ". Ganha todo mundo junto."],
+  ["Comemorar junto", " cada conquista, das grandes às pequenas."],
 ];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -214,27 +214,25 @@ export default function Dna() {
                 coisa em três lugares.
               </p>
               <p>
-                A NoraLabs nasceu de um incômodo com isso. Começamos em 2025 com
-                o AtendeBot, dentro do ecossistema da Hawk, e vimos de perto que
-                o problema quase nunca era falta de ferramenta. Era ferramenta
-                que não conhecia a empresa. Então decidimos fazer o contrário:{" "}
+                A NoraLabs nasceu desse incômodo. A gente começou em 2025 com o
+                AtendeBot, dentro do ecossistema da Hawk, e foi vendo de perto o
+                que as empresas queriam de verdade: ferramenta que entende como
+                elas trabalham. Daí veio a nossa ideia fixa:{" "}
                 <strong className="font-semibold text-white">
-                  a tecnologia se adapta à operação, e não a operação à
-                  tecnologia.
+                  construir a tecnologia em volta da operação de cada empresa.
                 </strong>
               </p>
               <p>
-                Esta página é o nosso jeito de ser, escrito. Mais do que ler, a
-                ideia é viver.
+                Esse é o nosso jeito de ser, colocado no papel. A graça é viver
+                isso no dia a dia.
               </p>
             </Reveal>
           </div>
         </section>
 
-        <Lema segments={[{ text: "Pronto é quando" }, { text: "funciona", em: true }, { text: "para o cliente." }]}>
-          O que nos deixa orgulhosos não é a tela bonita na apresentação. É
-          saber que, do outro lado, alguém parou de fazer uma tarefa chata
-          porque o sistema que a gente construiu agora faz por ela.
+        <Lema segments={[{ text: "Pronto é quando" }, { text: "funciona", em: true }, { text: "pro cliente." }]}>
+          Nada dá mais orgulho do que saber que, do outro lado, alguém largou
+          uma tarefa chata porque o sistema que a gente fez agora cuida disso.
         </Lema>
 
         <Founders />
@@ -242,8 +240,8 @@ export default function Dna() {
         <section className="py-32">
           <div className="container">
             <Heading eyebrow="Nosso DNA em 4 pontos" title="Na dúvida, volte aqui.">
-              Se um dia bater a dúvida “estou no caminho certo?”, estes quatro
-              pontos respondem.
+              Bateu a dúvida “tô no caminho certo?”, é só passar por estes
+              quatro pontos.
             </Heading>
             <div className="mx-auto mt-16 grid max-w-4xl gap-x-10 gap-y-14 md:grid-cols-2">
               {PONTOS.map((ponto, i) => (
@@ -285,8 +283,8 @@ export default function Dna() {
                   Propósito
                 </p>
                 <p className="mt-10 font-display text-3xl font-bold leading-snug tracking-tight md:text-5xl">
-                  Fazer a tecnologia se adaptar às empresas,{" "}
-                  <span className="text-white/40">e não o contrário.</span>
+                  Fazer tecnologia que se encaixa{" "}
+                  <span className="text-white/40">no jeito de cada empresa trabalhar.</span>
                 </p>
               </div>
             </Reveal>
@@ -305,9 +303,9 @@ export default function Dna() {
                   de faturamento mensal até fevereiro de 2027.
                 </p>
                 <p className="mt-5 leading-relaxed text-white/55">
-                  É um passo grande para um time do nosso tamanho, e é
-                  exatamente por isso que ele empolga. Cada sistema que entra em
-                  produção e cada cliente bem cuidado nos deixa mais perto.
+                  É um baita salto pra um time do nosso tamanho, e é isso que
+                  empolga. Cada sistema no ar e cada cliente bem cuidado deixa a
+                  gente mais perto.
                 </p>
               </div>
             </Reveal>
@@ -325,13 +323,12 @@ export default function Dna() {
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-white/60">
                 A gente entende a operação, desenha a solução, constrói, coloca
-                para rodar e segue cuidando.
+                pra rodar e segue cuidando.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-white/60">
-                Não somos uma fábrica de software que recebe uma lista de telas e
-                devolve um código, nem revenda de ferramenta pronta. Somos
-                parceiros. E, se o problema do cliente se resolve sem sistema
-                nenhum, a gente fala.
+                Funciona como parceria: a gente entra no dia a dia do cliente,
+                pensa junto e fala a real, até quando a melhor saída nem envolve
+                sistema.
               </p>
             </Reveal>
             <SystemsCollage />
@@ -340,7 +337,7 @@ export default function Dna() {
 
         <section className="py-32">
           <div className="container">
-            <Heading eyebrow="Como a gente se relaciona" title="Todo mundo é dono." />
+            <Heading eyebrow="Como a gente se relaciona" title="Time pequeno, cabeça de dono." />
             <Cards items={RELACAO} />
           </div>
         </section>
@@ -351,11 +348,10 @@ export default function Dna() {
             <Cards items={TRABALHO} />
             <Reveal className="mt-20 text-center">
               <p className="font-display text-3xl font-bold tracking-tight md:text-5xl">
-                Evoluímos{" "}
                 <span className="bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
                   1%
                 </span>{" "}
-                todos os dias.
+                melhor todo dia.
               </p>
             </Reveal>
           </div>
@@ -374,11 +370,10 @@ export default function Dna() {
               <Reveal>
                 <blockquote className="border-l-2 border-sky-200/40 pl-6">
                   <p className="font-display text-2xl font-semibold">
-                    Peça desculpas, não peça licença.
+                    Na dúvida, vai.
                   </p>
                   <p className="mt-2 leading-relaxed text-white/55">
-                    Não deixe de tentar por medo de errar. Errar faz parte; o
-                    importante é aprender com o erro.
+                    Errar faz parte do jogo. Tenta, aprende, ajusta e segue.
                   </p>
                 </blockquote>
               </Reveal>
@@ -388,9 +383,8 @@ export default function Dna() {
                     Cliente, empresa, time, cada um de nós.
                   </p>
                   <p className="mt-2 leading-relaxed text-white/55">
-                    Na dúvida, pensamos no que é melhor para o cliente, depois
-                    para a empresa, depois para o time e, por fim, para cada um
-                    de nós.
+                    Quando a escolha aperta, a ordem é essa: primeiro o cliente,
+                    depois a empresa, depois o time e por último cada um de nós.
                   </p>
                 </blockquote>
               </Reveal>
@@ -401,8 +395,7 @@ export default function Dna() {
         <section id="intervalo" className="py-32">
           <div className="container">
             <Heading eyebrow="Intervalo" title="Leveza também é valor.">
-              Trabalho sério não precisa ser pesado. Bate uma bolinha com a
-              Nora antes de seguir.
+              Respira. Bate uma bolinha com a Nora e depois segue a leitura.
             </Heading>
             <Reveal className="mx-auto mt-12 max-w-4xl">
               <Pong />

@@ -73,7 +73,7 @@ export default function DnaHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35, ease: EASE }}
           >
-            Que bom que você chegou. A partir de agora, a gente constrói junto.
+            Que bom que você chegou. Daqui pra frente, a gente constrói junto.
           </motion.p>
         </div>
       </div>
